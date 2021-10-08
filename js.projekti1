@@ -1,3 +1,0 @@
-function tulosta() {
-    document.write("Hello!")
-}
