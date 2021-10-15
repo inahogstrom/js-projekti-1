@@ -1,0 +1,16 @@
+body {
+    background-color: #272f49;
+}
+
+h1 {
+    color: #7fffd4;
+    text-align: center;
+}
+
+fieldset {
+    width: 30%;
+}
+
+legend, label, span, h3 {
+    color: #e7f4f4;
+}
