@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Projeti 1</title>
 </head>
 <body>
-    <p>Hello</p>
-    <script scr="projekti1.js">
-        tulosta();
-    </script>
+
+    <h1>Tämä on tuntipäiväkirja</h1>
+    <p>Tänne voit kirjata paljonko olet tehnyt mitäkin asiaa</p>
+
+    <form name = "myForm" action = "#" onsubmit = "return validateFields()" method = "post">
+        <fieldset>
+            <legend>Paljonko käytit tunteja?</legend>
+            <div>
+                <label for = "tekeminen">Mitä teit?</label>
+                <select name = "tekeminen" id = "tekeminen" size="1" required>
+                    <option value="koulu">Koulu</option>
+                    <option value="kotitehtavat">Kotitehtävät</option>
+                    <option value="urheilu">Urheilu</option>
+                    <option value="muuHarrastus">Muu harrastus</option>
+                    <option value="muu">Jokin muu</option>
+                </select>
+                <span id="feedback1">Valitse mitä teit</span>
+            </div>
+            <div>
+                <label for="tunnit">Tunnit</label>
+                <input type="number" name="tunnit" id="tunnit" min="1" required>
+                <span id="feedback2">Valitse tunnit</span>
+            </div>
+            <input type="submit" value="laske" id="submit">
+        </fieldset>
+    </form>
+
+    <script src="projekti1.js"></script>
 </body>
 </html>
