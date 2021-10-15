@@ -14,3 +14,13 @@ fieldset {
 legend, label, span, h3 {
     color: #e7f4f4;
 }
+
+#submit {
+    color: #000;
+}
+
+/*This does not work for some reason */
+div {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
