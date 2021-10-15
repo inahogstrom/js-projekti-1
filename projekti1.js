@@ -1,3 +1,5 @@
-function tulosta() {
-    console.log("Hello there!");
-}
+  function store(){
+     var inputEmail= document.getElementById("email");
+     localStorage.setItem("email", inputEmail.value);
+    }
+    function SubmitClick() { $("#submit").click(function(event) { alert("it works!"); }); } $(document).ready(function() { SubmitClick(); });
