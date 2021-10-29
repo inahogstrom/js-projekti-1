@@ -7,12 +7,13 @@ var tunnit,
     muuharTunnit,
     muuTunnit
 
-
+// Otetaan selectin arvo talteen
 function getSelectedValue() {
     SelectedValue = document.getElementById("tekeminen").value;
     console.log(SelectedValue);
 }
 
+// Tallennetaan tunnit syötetyn valinnan kohdalle ja tallennetaan ne vielä local storageen
 function getTunnit() {
     tunnit = document.querySelector("#tunnit").value;
     console.log(tunnit);
@@ -20,6 +21,7 @@ function getTunnit() {
     if (localStorage.length > 0 ) {
 
         if (SelectedValue == "koulu") {
+            
             kTunnit = parseInt(localStorage.getItem("kTunnit"));
             kTunnit += tunnit;
             localStorage.setItem("kTunnit", kTunnit);
@@ -69,12 +71,11 @@ function getTunnit() {
         localStorage.setItem("muuharTunnit", "0");
         localStorage.setItem("muuTunnit", "0");
 
-        // kopioi ylempi if lause tänne
     }
 
 }
 
-
+// Luodaan näytettävät elementit
     const teksti = document.createTextNode("Tässä näet paljonko olet tehnyt mitäkin ");
     const kouluTeksti = document.createTextNode("Käynyt koulua " + localStorage.getItem("kTunnit") + " tuntia");
     const ktTeksti = document.createTextNode("Tehnyt kotitehtäviä " + localStorage.getItem("ktTunnit") + " tuntia");
@@ -83,6 +84,7 @@ function getTunnit() {
     const mhTeksti = document.createTextNode("Tehnyt muita harrastuksia " + localStorage.getItem("muuharTunnit") + " tuntia");
     const muuTeksti = document.createTextNode("Tehnyt jotain muuta " + localStorage.getItem("muuTunnit") + " tuntia");    
 
+// Näytetään edellinen sivulla
 function nayta(){
 
     document.getElementById("otsikko").appendChild(teksti);
