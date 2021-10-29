@@ -8,7 +8,7 @@ h1 {
 }
 
 fieldset {
-    width: 30%;
+    width: 35%;
 }
 
 legend, label, span, h3 {
@@ -23,4 +23,22 @@ legend, label, span, h3 {
 div {
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+#nayta {
+    margin-top: 5%;
+    margin-left: 1%;
+}
+
+#lista {
+    color: #fff;
+}
+
+#tuntiLista {
+    padding-bottom: 5px;
+}
+
+#otsikko, #kouluNaytto, #ktNaytto, #tyoNaytto, #urheiluNaytto, #muuharNaytto, #muuNaytto{
+    color: yellowgreen;
+    border: black;
 }

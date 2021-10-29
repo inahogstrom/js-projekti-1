@@ -12,18 +12,17 @@
     <h1>Tämä on tuntipäiväkirja</h1>
     <h3>Tänne voit kirjata paljonko olet tehnyt mitäkin asiaa</h3>
 
-    <form name = "myForm" action = "#" onsubmit = "return validateFields()" method = "post">
         <fieldset>
             <legend>Paljonko käytit tunteja?</legend>
             <div>
                 <label for = "tekeminen">Mitä teit?</label>
-                <select name = "tekeminen" id = "tekeminen" size="1" required>
-                    <option value="koulu">Koulu</option>
-                    <option value="kotitehtavat">Kotitehtävät</option>
-                    <option value="tyo">Työ</option>
-                    <option value="urheilu">Urheilu</option>
-                    <option value="muuHarrastus">Muu harrastus</option>
-                    <option value="muu">Jokin muu</option>
+                <select name = "tekeminen" id = "tekeminen" size="1" required onchange="getSelectedValue()">
+                    <option value="koulu" id="koulu">Koulu</option>
+                    <option value="kotitehtavat" id="kotitehtavat">Kotitehtävät</option>
+                    <option value="tyo" id="tyo">Työ</option>
+                    <option value="urheilu" id="urheilu">Urheilu</option>
+                    <option value="muuHarrastus" id="muuHarrastus">Muu harrastus</option>
+                    <option value="muu" id="muu">Jokin muu</option>
                 </select>
                 <span id="feedback1">Valitse mitä teit</span>
             </div>
@@ -32,10 +31,38 @@
                 <input type="number" name="tunnit" id="tunnit" min="1" required>
                 <span id="feedback2">Valitse tunnit</span>
             </div>
-            <input type="submit" value="submit" id="submit">
+            <input onclick="getTunnit()" type="submit" value="submit" id="submit"/>
         </fieldset>
-    </form>
+    
+    <button onclick="nayta()" id="nayta">Näytä mitä olet tehnyt</button>
+
+    <div id="lista">
+        <table id="hide">
+            <tr id="otsikko">
+
+            </tr>
+            <tr id="kouluNaytto">
+                
+            </tr>
+            <tr id="ktNaytto">
+                
+            </tr>
+            <tr id="tyoNaytto">
+                
+            </tr>
+            <tr id="urheiluNaytto">
+                
+            </tr>
+            <tr id="muuharNaytto">
+                
+            </tr>
+            <tr id="muuNaytto">
+                
+            </tr>
+        </table>
+    </div>    
 
     <script src="projekti1.js"></script>
 </body>
 </html>
+
